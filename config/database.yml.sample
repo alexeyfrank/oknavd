@@ -1,0 +1,22 @@
+common: &COMMON
+  adapter: postgresql
+  encoding: unicode
+  pool: 10
+
+development:
+  <<: *COMMON
+  database: mdmstandart_development
+  username: postgres
+  password: root
+
+test:
+  <<: *COMMON
+  database: mdmstandart_test
+  username: postgres
+  password: root
+
+production:
+  <<: *COMMON
+  database: mdmstandart_production
+  username: postgres
+  password: root
