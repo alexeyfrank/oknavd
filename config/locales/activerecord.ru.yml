@@ -1,0 +1,26 @@
+ru:
+  activerecord:
+    models:
+      user: 'пользователя'
+      page: 'страницу'
+    attributes:
+      user:
+        email: 'E-mail'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        state: 'Состояние'
+        state_event: 'Действие'
+        created_at: 'Дата создания'
+      page:
+        state_event: 'Действие'
+        title: 'Название'
+        slug: 'Ссылка'
+        content: 'Содержимое'
+        state: 'Состояние'
+        created_at: 'Дата создания'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              email: 'Введен некорректный E-mail'
