@@ -9,7 +9,7 @@ class Web::Admin::PagesController < Web::Admin::ApplicationController
   end
 
   def edit
-    @page = ::Web::Admin::PageEditType.find params[:id]
+    @page = ::Web::Admin::PageEditType.find_by_slug! params[:id]
   end
 
   def create
@@ -24,7 +24,7 @@ class Web::Admin::PagesController < Web::Admin::ApplicationController
   end
 
   def update
-    @page = ::Web::Admin::PageEditType.find params[:id]
+    @page = ::Web::Admin::PageEditType.find_by_slug! params[:id]
     if @page.update_attributes params[:page]
       flash_success
       redirect_to edit_admin_page_path(@page)
@@ -35,7 +35,7 @@ class Web::Admin::PagesController < Web::Admin::ApplicationController
   end
 
   def destroy
-    @page = Page.find params[:id]
+    @page = Page.find_by_slug! params[:id]
     @page.destroy
     flash_success
     redirect_to admin_pages_path

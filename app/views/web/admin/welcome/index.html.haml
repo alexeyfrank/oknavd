@@ -2,19 +2,21 @@
 
 .row
   .span8.well
-    %h3= t '.users'
+    %h3= t '.questions'
     %table.table.table-striped
       %thead
         %tr
-          %th= User.human_attribute_name(:email)
-          %th= User.human_attribute_name(:state)
-          %th= User.human_attribute_name(:created_at)
+          %th= Question.human_attribute_name(:full_name)
+          %th= Question.human_attribute_name(:email)
+          %th= Question.human_attribute_name(:phone)
+          %th= Question.human_attribute_name(:created_at)
       %tbody
-        - @users.each do |user|
+        - @questions.each do |question|
           %tr
-            %td= link_to user, edit_admin_user_path(user)
-            %td= user.human_state_name
-            %td= l user.created_at
+            %td= link_to question, admin_question_path(question)
+            %td= question.email
+            %td= question.phone
+            %td= l question.created_at
 
   .span8.well
     %h3= t '.pages'
@@ -32,3 +34,18 @@
             %td= page.slug
             %td= page.human_state_name
             %td= l page.created_at
+
+    %h3= t '.users'
+    %table.table.table-striped
+      %thead
+        %tr
+          %th= User.human_attribute_name(:email)
+          %th= User.human_attribute_name(:state)
+          %th= User.human_attribute_name(:created_at)
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td= link_to user, edit_admin_user_path(user)
+            %td= user.human_state_name
+            %td= l user.created_at
+
