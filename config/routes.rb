@@ -13,6 +13,7 @@ MdmStandart::Application.routes.draw do
 
       resources :users
       resources :pages
+      resources :questions
     end
   end
 end

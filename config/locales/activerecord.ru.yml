@@ -23,6 +23,7 @@ ru:
         email: 'E-mail'
         phone: 'Телефон'
         content: 'Текст сообщения'
+        created_at: 'Дата создания'
     errors:
       models:
         user:

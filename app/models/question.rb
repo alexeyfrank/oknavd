@@ -1,4 +1,6 @@
 class Question < ActiveRecord::Base
+  include QuestionRepository
+
   attr_accessible :content, :email, :full_name, :phone
 
   validates :full_name, presence: true, length: { maximum: 255 }
