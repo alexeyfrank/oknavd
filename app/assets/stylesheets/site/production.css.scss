@@ -1,5 +1,13 @@
 .production {
   min-height: 210px;
 
-
+  .product {
+    height: 180px;
+    position: relative;
+    a {
+      position: absolute;
+      bottom: 0;
+      display: block;
+    }
+  }
 }

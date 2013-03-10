@@ -25,7 +25,7 @@ SimpleForm.setup do |config|
     b.use :html5
     b.use :placeholder
     b.wrapper :tag => 'div', :class => 'controls' do |ba|
-      ba.use :input, class: 'input-block-level'
+      ba.use :input
       ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end

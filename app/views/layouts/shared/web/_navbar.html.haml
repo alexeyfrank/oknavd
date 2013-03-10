@@ -14,7 +14,7 @@
           %li= link_to "Прайс-лист", page_path(:price)
         %ul.nav.nav-collapse
           %li= link_to "Портфолио партнеров", page_path(:partners)
-          %li= link_to "Обратная связь", "/path3"
+          %li= link_to "Обратная связь", new_question_path
       .span3
         .info
           %p.email info@mdmstandart.ru
@@ -22,4 +22,4 @@
           %p.phone
             %span.code +7 (351)
             %span.number 79 55 95
-          = link_to 'Оставьте номер и мы вам перезвоним', '#', class: 'feedback'
+          = link_to 'Оставьте номер и мы вам перезвоним', new_question_path, class: 'feedback'
