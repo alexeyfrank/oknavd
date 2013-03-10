@@ -1,3 +1,19 @@
 ---
 ru:
+  web:
+    admin:
+      questions:
+        index:
+          title: ''
+          search: ''
+          actions: ''
+        show:
+          back: ''
   success: ''
+  activerecord:
+    errors:
+      models:
+        question:
+          attributes:
+            email:
+              email: ''
