@@ -18,6 +18,11 @@ ru:
         content: 'Содержимое'
         state: 'Состояние'
         created_at: 'Дата создания'
+      question:
+        full_name: 'ФИО'
+        email: 'E-mail'
+        phone: 'Телефон'
+        content: 'Текст сообщения'
     errors:
       models:
         user:
