@@ -26,4 +26,8 @@ class Page < ActiveRecord::Base
   def to_s
     title
   end
+
+  def to_param
+    slug
+  end
 end

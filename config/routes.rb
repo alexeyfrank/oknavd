@@ -5,6 +5,7 @@ MdmStandart::Application.routes.draw do
   scope module: :web do
     root to: "welcome#index"
 
+    resources :pages, only: [ :show ]
     resource :session, only: [ :new, :create, :destroy ]
 
     namespace :admin do
