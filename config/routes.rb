@@ -7,7 +7,7 @@ MdmStandart::Application.routes.draw do
 
     resources :pages, only: [ :show ]
     resource :session, only: [ :new, :create, :destroy ]
-
+    resources :questions, only: [ :new, :create ]
     namespace :admin do
       root to: "welcome#index"
 

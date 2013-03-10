@@ -9,11 +9,9 @@
 
     /[if lt IE 9]
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
+
+    %link(href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet')
     = stylesheet_link_tag "site", :media => "all"
-    %link(href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144")
-    %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
-    %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
-    %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="favicon.ico" rel="shortcut icon")
 
   %body
@@ -21,7 +19,7 @@
     = render 'layouts/shared/web/production'
     = render 'layouts/shared/web/companies'
 
-    .container
+    .container.content
       .row
         .span12
           = bootstrap_flash
