@@ -21,14 +21,14 @@
             %span.icon-bar
             %span.icon-bar
           = link_to "МДМ Стандарт", admin_root_path, class: :brand
-          .container.nav-collapse
+          .nav-collapse
             %ul.nav
               %li= link_to "Пользователи", admin_users_path
               %li= link_to "Страницы", admin_pages_path
 
-            %ul.nav.pull-right.nav-collapse
-              %li.divider-vertical
-              %li.dropdown
+          %ul.nav.pull-right.nav-collapse
+            %li.divider-vertical
+            %li.dropdown
               %a.dropdown-toggle(href="#" data-toggle="dropdown")
                 = current_user.email
                 %b.caret
