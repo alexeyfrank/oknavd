@@ -1,9 +1,3 @@
 ---
 ru:
-  activerecord:
-    errors:
-      models:
-        question:
-          attributes:
-            email:
-              email: ''
+  success: ''
