@@ -30,3 +30,7 @@ ru:
           attributes:
             email:
               email: 'Введен некорректный E-mail'
+        question:
+          attributes:
+            email:
+              email: 'Введен некорректный E-mail'

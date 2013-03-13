@@ -4,21 +4,51 @@
     margin-bottom: 20px;
 
     .company-link {
-        margin: 0 auto;
-        height: 77px;
-        width: 310px;
+        margin: 0 auto 10px auto;
+        height: 76px;
+        width: 396px;
         display: block;
-    }
+        background-image: url(<%= asset_path('companies/bg.png') %>);
+        position: relative;
 
-    .mdm-group {
-        background-image: url(<%= asset_path('companies/mdm-group.png') %>);
-    }
+        i {
+            display: block;
+            margin: auto;
+        }
+        .mdm-group {
+            background: url(<%= asset_path('companies/mdmgroup.png') %>) no-repeat;
+            position: absolute;
+            top: 15px;
+            left: 140px;
+            width: 116px;
+            height: 47px;
+        }
 
-    .mdm-complect {
-        background-image: url(<%= asset_path('companies/mdm-complect.png') %>);
-    }
+        .cryspi {
+            background: url(<%= asset_path('companies/cryspi.png') %>) no-repeat;
+            position: absolute;
+            top: 15px;
+            left: 122px;
+            width: 153px;
+            height: 42px;
+        }
 
-    .index-ventures {
-        background-image: url(<%= asset_path('companies/mdm-group.png') %>);
+        .indexeventus {
+            background: url(<%= asset_path('companies/indexiventus.png') %>) no-repeat;
+            position: absolute;
+            top: 15px;
+            left: 122px;
+            width: 165px;
+            height: 35px;
+        }
+
+        .vitrina {
+            background: url(<%= asset_path('companies/vitrina.png') %>) no-repeat;
+            position: absolute;
+            top: 7px;
+            left: 170px;
+            width: 65px;
+            height: 63px;
+        }
     }
 }

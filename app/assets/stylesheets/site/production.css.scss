@@ -1,13 +1,51 @@
 .production {
-  min-height: 210px;
+  min-height: 330px;
+
+  .span3 {
+    &:first-child {
+      margin-left: 55px;
+    }
+  }
+
+  .span26 {
+    width: 215px;
+  }
+
+  .span25 {
+    width: 210px;
+  }
+
+  .square img {
+    padding-top: 60px;
+  }
 
   .product {
-    height: 180px;
+    height: 305px;
     position: relative;
-    a {
+
+
+    & > a {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: 25px;
+      display: block;
+      color: #8b1919;
+    }
+
+    .subcategories {
+      width: 100%;
+      margin: 0;
       position: absolute;
       bottom: 0;
-      display: block;
+      text-align: center;
+      li {
+        display: inline;
+        a {
+          color: #354985;
+          font-size: 14px;
+        }
+      }
     }
   }
 }
