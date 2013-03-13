@@ -18,7 +18,7 @@ class Web::Admin::PagesControllerTest < ActionController::TestCase
   end
 
   test "should get :edit" do
-    get :edit, id: @page.id
+    get :edit, id: @page.slug
     assert_response :success
   end
 
@@ -32,14 +32,14 @@ class Web::Admin::PagesControllerTest < ActionController::TestCase
 
   test "should put :update" do
     attrs = attributes_for :page
-    put :update, id: @page.id, page: attrs
+    put :update, id: @page.slug, page: attrs
     assert_response :redirect
     page = Page.find_by_title attrs[:title]
     assert page == @page
   end
 
   test "should delete :destroy" do
-    delete :destroy, id: @page.id
+    delete :destroy, id: @page.slug
     assert_response :redirect
     assert !Page.exists?(@page)
   end
