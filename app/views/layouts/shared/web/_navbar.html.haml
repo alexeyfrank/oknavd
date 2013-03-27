@@ -1,25 +1,16 @@
-.navbar.navbar-fixed-top.custom
-  .navbar-inner
-    .container
-      .span3
+.container.custom-top-menu-container
+  .navbar.custom-top-menu
+    .navbar-inner
+      .container
         %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
         = link_to '', root_path, class: 'brand'
-      .span5
         %ul.nav.nav-collapse
-          %li= link_to "О компании", page_path(:about)
-          %li= link_to "Контакты", page_path(:contacts)
-          %li= link_to "Обратная связь", new_question_path
-          -#%li= link_to "Прайс-лист", page_path(:price)
-        -#%ul.nav.nav-collapse
-          -#%li= link_to "Портфолио партнеров", page_path(:partners)
-      .span3
-        .info
-          %p.email info@mdmstandart.ru
-          %p Звоните нам (Поволжье)
-          %p.phone
-            %span.code +7 (351)
-            %span.number 79 55 95
-          = link_to 'Оставьте номер и мы вам перезвоним', new_question_path, class: 'feedback'
+          %li= link_to "Окна и двери", page_path(:about)
+          %li= link_to "Услуги и сервис", page_path(:contacts)
+          %li= link_to "Наши преимущества", new_question_path
+          %li= link_to "Компания", new_question_path
+          %li= link_to "Где купить", new_question_path
+          %li= link_to "Контакты", new_question_path

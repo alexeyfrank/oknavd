@@ -1,0 +1,486 @@
+@charset "utf-8";
+@charset "utf-8";
+#rh-loadCss {
+	z-index: 1;   
+	position: fixed; 
+}
+* {
+	outline: none; 	
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+    font-size: 12px;
+}
+#container, #offline, #online {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.center {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	
+	height: 100%;
+}
+.topPanel {
+	cursor: default;
+}
+#blocker {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #000;
+	-moz-opacity: 0.01;
+    -khtml-opacity: 0.01;
+    opacity: 0.01;
+	z-index: 99999;
+}
+.colorifier {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: none;
+	opacity: 0.1;
+	pointer-events: none;
+}
+/* Copyrights */
+#footer {
+	display: none;
+}
+@charset "utf-8";
+#offline .header {
+	font-weight: bold;
+}
+#feedbackForm {
+	position: relative;
+	overflow: hidden;
+}
+#offline input, #offline textarea {
+	line-height: 1.167em;
+	padding: 0.167em;
+	width: 100%;
+    margin-top: 0;
+}
+.inputField.message {
+	margin-top: 0.833em;
+}
+.inputField {
+	margin-top: 0.334em;
+}
+#actionPanel {
+	position: relative;
+	margin-right: 0;
+	margin-top: 1.25em;
+	float: right;
+}
+#throbber {
+	color: #555;
+	background: url(../images/common/throbber.gif) no-repeat;
+	float: right;
+	padding-left: 18px;
+	margin-right: 8px;
+	height: 20px;
+}
+#sendButton {
+    float: right;
+    width: 6.25em;
+    height: 1.14em;
+    padding: 0.334em 1.25em 0.5em;
+    cursor: pointer;
+    text-align: center;
+}
+#offlineSuccess {
+	margin: 0 auto;
+	height: 50%;
+	position: relative;
+	color: #090;
+	font-size: 1.5em;
+}
+#offlineSuccess div {
+	position: absolute;
+	bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+div.phone {
+    display: none;
+}
+.phoneEnabled div.phone {
+    display: block;
+}
+@charset "utf-8";
+#onlinePanel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.wrapper {
+	padding: 0 0.833em 0 0.667em;
+	height: 100%;
+}
+#online .topPanel {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0.667em;
+	right: 0.667em;
+}
+.free #online .topPanel {
+    top: 0.417em;
+    left: 1.25em;
+    right: 1.25em;
+}
+#faceWrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+    height: 6.417em;
+}
+#face {
+	float: left;
+	margin: 0.417em 1.667em 0.417em 0;
+}
+#topDescription {
+	float: left;
+	margin: 0.417em 0;
+	left: 7.5em;
+	overflow: hidden;
+	position: absolute;
+	right: 0.833em;
+}
+.free #topDescription {
+    left: 0;
+}
+#topHeader {
+	font-weight: bold;
+	font-size: 1.833em;
+}
+#topText {
+	margin: 0.417em 0 0 0;
+}
+#chatItself {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+#chatInput {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 5em;
+	padding: 0;
+}
+#chatTextarea {
+	width: 100%;
+	height: 5em;
+	margin:  0;
+	padding: 0.167em 0 0 0.167em;
+	border: none;
+	resize: none;
+}
+::selection {
+	background: #ccc;
+}
+::-moz-selection {
+	background: #ccc;
+}
+#container {
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	color: #333;
+    background: #efefef;
+}
+#online {
+	background: url("../images/mac/onlineBack.png") repeat-x #efefef;
+}
+#onlinePanel {
+	bottom: 15.167em;
+}
+#online .center {
+	padding: 6.667em 0 8.333em;
+}
+#online .topPanel {
+	color: #555;
+	text-shadow: #fff 1px 1px 0, #AAA 0 0 1px;
+}
+#face {
+	border: 1px solid #ccc;
+    width: 5.167em;
+}
+.free #face {
+    display: none;
+}
+#chatItself {
+	background: #fff !important;
+	border: 1px solid #b7b7b7;
+	padding-bottom: 0.833em;
+}
+#chatInput {
+	border: 1px solid #bdbdbd;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-top: 0.833em;
+}
+#chatTextarea {
+	overflow: auto;
+	background: #fff;    
+	font-family: "Helvetica Neue", Helvetica, Arial, San-serif;
+	font-size: 1em;
+	color: #bbb;
+	box-shadow: 0 1px 0.12em #ccc inset;
+	padding: 5px 5px;
+}
+#chatTextarea.disabled {
+    background: #f8f8f8;
+}
+#textAreaWrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 2.667em;
+}
+#chatSend {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 2.47em;
+	background: url("../images/mac/buttons.png") -8.667em 0 no-repeat;
+    background-size: 18.583em;
+}
+#chatSend:hover {
+	background: url("../images/mac/buttons.png") -11.167em 0 no-repeat;
+    background-size: 18.583em;
+}
+#chatSend.disabled, #chatSend.disabled:hover {
+    background: url("../images/mac/buttons.png") -8.667em 0 no-repeat;
+    background-size: 18.583em;
+}
+#scrollBarContainer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	z-index: 99995;
+}
+#scrollBar {
+	width: 7px;
+	height: 100px;
+	position: absolute;
+	top: 20px;
+	margin-top: 10px;
+	display: none;
+}
+.msg {
+	padding: 0 0.833em 0;
+	overflow: hidden;
+}
+.msgHeader {
+	overflow: hidden;
+	width: 100%;
+	margin: 0.833em 0 0.417em 0;
+	font-family: "Trebuchet MS", Tahoma, Arial, Verdana, sans-serif;
+}
+.time {
+	float: right;
+	margin: 0.417em 0.5em 0 -8.33em;
+}
+.sender {
+	margin: 0 0 0 0.833em;
+	float: left;
+}
+.textWrapper {
+	width: 100%;
+}
+.prompt .textWrapper {
+	background: #F2F5F5;
+	border: 1px solid #E3E4E4;
+	border-radius: 0.33em;
+}
+.text {
+	padding: 0.417em 5em 0.66em 1em;
+	word-wrap: break-word;
+}
+.prompt .text {
+	padding:  0.417em 1em 0.66em 1em;
+}
+.invitation .text {
+	padding-right: 0.417em;
+}
+.msgHeader {
+	background: #f2f5f5;
+	border: 1px solid #E3E4E4;
+	border-radius: 0.33em;
+	-moz-border-radius: 0.33em;
+}
+.time {
+	color: #aaa;
+}
+.prompt .time {
+	display: none;
+}
+.msgHeader.fromVisitor {
+	background: #eef;
+}
+.sender {
+	font-weight: bold;
+	color: #5a5;
+}
+span.fromVisitor, .fromVisitor .sender {
+	color: #a55 !important;
+}
+.text {
+	color: #555;
+	font-size: 1.167em;
+	border-bottom: 0.07em solid #f5f5f5;
+}
+#typingLabel, #chatLabel {
+	display: none;
+}
+#typingLabel .text, #chatLabel .text {
+	color: #aaa;
+	font-size: 1em;
+	padding: 0.167em 1em 0.167em 1em;
+}
+#chatLabel.loading .text {
+	background: url(../images/common/throbberSmall.gif) no-repeat 1em 50%;
+	padding-top: 0.833em;
+	padding-bottom: 0.833em;
+	padding-left: 2.917em;
+}
+.promptButtonWrapper {
+	min-width: 13.667em;
+	margin: 0.417em;
+}
+.promptButton {
+	min-width: 3.75em;
+	margin: 0 0.417em 0 0;
+	background: #B5BCC5;
+	border: 1px solid #A0A7B0;
+	-moz-border-radius: 0.417em;
+	border-radius: 0.417em;
+	text-shadow: 0 1px 0 #A0A7B0;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.083em;
+	cursor: pointer;
+}
+.promptButton.yes {
+	background: #5A5;
+}
+.promptButton.yes:hover {
+	background: #6B6;
+	border: 1px solid #008800;
+}
+.promptButton:hover {
+	background: #BCBCBC;
+	border: 1px solid #888888;
+	text-shadow: 0 0 1px #fff;
+}
+.promptButton {
+	float: right;
+	width: 2.333em;
+	height: 1.25em;
+	padding: 0.25em 1.25em 0.417em;
+	cursor: pointer;
+	text-align: center;
+}
+#offline {
+	background: url("../images/mac/offlineBack.png") repeat;
+	line-height: ;
+}
+.description {
+	line-height: 1.167em;
+}
+#offline input, #offline textarea {
+	box-shadow: 0 1px 2px #ccc inset;
+	border: 1px solid #aaa;
+	border-radius: 0.167em;
+	-moz-border-radius: 0.167em;
+	font-family: "Trebuchet MS", Tahoma, Arial,Verdana, Sans-serif;
+	font-size: 1.167em;
+	line-height: 1.286em;
+}
+#sendButton {
+    background: url("../images/mac/buttons.png") 0.2em 0.03em no-repeat;
+    background-size: 18.583em;
+    font-size: 1.083em;
+    text-shadow: 0 0 1px #000;
+    color: #fff;
+}
+#sendButton:hover {
+    background: url("../images/mac/buttons.png") .3em -1.95em no-repeat;
+    background-size: 18.583em;
+}
+.pressed#sendButton {
+	background: url("../images/mac/buttons.png") 0.167em -4em no-repeat;
+    background-size: 18.583em;
+}
+#scrollBar {
+	display: none;
+}
+#offline .topPanel {
+	height: 5.2em;
+	padding: 1.00em 1.667em 0;
+	overflow: hidden;
+}
+#offline #feedbackForm {
+	position: absolute;
+	overflow: hidden;
+	top: 6.25em;
+	bottom: 0;
+	left: 0;
+	right: 0.5em;
+	padding: 0 1.667em;
+}
+#offline #actionPanel {
+	position: absolute;
+	margin: 0;
+	bottom: 2.5em;
+	right: 1.5em;
+}
+.inputField.message {
+	position: absolute;
+	top: 6.833em;
+	left: 1.667em;
+	right: 1.667em;
+	bottom: 7.917em;
+}
+.phoneEnabled .inputField.message {
+    top: 11em;
+}
+#offline .message textarea {
+	height: 100%;
+	position: absolute;
+	top: 1.167em;
+	left: 0;
+	resize: none;
+}
+#offlineError {
+	padding-left: 1.75em;
+	font-weight: bold;
+	color: #c00;
+	position: absolute;
+	bottom: 4.75em;
+}
+#mailSuccess {
+	padding-left: 1.75em;
+	font-weight: bold;
+	color: #090;
+	position: absolute;
+	bottom: 4.75em;
+}

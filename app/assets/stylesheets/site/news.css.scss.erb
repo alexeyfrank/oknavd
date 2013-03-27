@@ -1,0 +1,32 @@
+@mixin border-radius($angle) {
+    -webkit-border-radius: $angle;
+    border-radius: $angle;
+}
+
+.container.news {
+    margin-top: -35px;
+    height: 200px;
+    background-color: white;
+    @include border-radius(10px);
+    margin-bottom: 25px;
+    padding: 25px;
+
+    .carousel-control {
+        background: transparent;
+        border: 0;
+        width:  39px;
+        height: 62px;
+        margin-top: 70px;
+    }
+    .left {
+        background-image: url(<%= asset_path('l_ar.png') %>);
+    }
+    .right {
+        background-image: url(<%= asset_path('r_ar.png') %>);
+    }
+
+    .news-block {
+        display: inline;
+        width: 250px;
+    }
+}

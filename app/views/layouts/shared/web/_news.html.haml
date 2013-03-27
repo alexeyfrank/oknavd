@@ -1,0 +1,27 @@
+.container.news
+  #newsCarousel.carousel.slide
+    .carousel-inner
+      .item.active
+        .news-block
+          = link_to '#' do
+            = image_tag ''
+            %span Заголовок новости
+        .news-block
+          = link_to '#' do
+            = image_tag ''
+            %span Заголовок новости
+        .news-block
+          = link_to '#' do
+            = image_tag ''
+            %span Заголовок новости
+        .news-block
+          = link_to '#' do
+            = image_tag ''
+            %span Заголовок новости
+
+
+      .item
+      .item
+
+    = link_to '', '#newsCarousel', class: 'carousel-control left', data: {slide: 'prev' }
+    = link_to '', '#newsCarousel', class: 'carousel-control right', data: {slide: 'next' }
