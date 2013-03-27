@@ -19,3 +19,13 @@ ru:
             activate: 'Активировать'
             deactivate: 'Деактивировать'
             trash: 'В корзину'
+      news:
+        state:
+          states:
+            active: 'Активен'
+            inactive: 'Неактивен'
+            trashed: 'В корзине'
+          events:
+            activate: 'Активировать'
+            deactivate: 'Деактивировать'
+            trash: 'В корзину'

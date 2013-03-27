@@ -18,6 +18,19 @@ ru:
         content: 'Содержимое'
         state: 'Состояние'
         created_at: 'Дата создания'
+      news:
+        state_event: 'Действие'
+        title: 'Название'
+        content: 'Содержимое'
+        preview_image: 'Превью'
+        state: 'Состояние'
+        created_at: 'Дата создания'
+      call_measurer:
+        state_event: 'Действие'
+        full_name: 'ФИО'
+        content: 'Содержимое'
+        contacts: 'Контакты'
+        created_at: 'Дата создания'
       question:
         full_name: 'ФИО'
         email: 'E-mail'

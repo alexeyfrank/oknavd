@@ -1,3 +1,8 @@
 ---
 ru:
+  web:
+    admin:
+      measures:
+        show:
+          back: ''
   success: ''

@@ -1,5 +1,9 @@
 MdmStandart::Application.routes.draw do
 
+  get "feedbacks/index"
+
+  get "feedbacks/show"
+
   mount Ckeditor::Engine => '/ckeditor'
 
   scope module: :web do
@@ -13,6 +17,9 @@ MdmStandart::Application.routes.draw do
 
       resources :users
       resources :pages
+      resources :news
+      resources :measures
+      resources :feedbacks
       resources :questions
     end
   end

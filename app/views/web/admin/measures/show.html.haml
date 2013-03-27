@@ -1,0 +1,12 @@
+%h1= t '.title'
+
+%h4= CallMeasurer.human_attribute_name :full_name
+%p= @item.full_name
+
+%h4= CallMeasurer.human_attribute_name :contacts
+%p= @item.contacts
+
+%h4= CallMeasurer.human_attribute_name :content
+%p= @item.content
+
+= link_to t('.back'), admin_measures_path, class: 'btn btn-primary'
