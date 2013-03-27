@@ -1,0 +1,6 @@
+.submenu.row
+  = items.each do |chunk|
+    .span3
+      %ul
+        - chunk.each do |item|
+          %li= link_to item, item.slug

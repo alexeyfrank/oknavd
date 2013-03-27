@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130327152326) do
+ActiveRecord::Schema.define(:version => 20130327182601) do
 
   create_table "call_measurers", :force => true do |t|
     t.string   "full_name"
@@ -44,6 +44,22 @@ ActiveRecord::Schema.define(:version => 20130327152326) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "menu_items", :force => true do |t|
+    t.string   "title"
+    t.integer  "position"
+    t.string   "slug"
+    t.integer  "menu_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "menus", :force => true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "news", :force => true do |t|
     t.string   "title"
     t.string   "content"
@@ -60,6 +76,7 @@ ActiveRecord::Schema.define(:version => 20130327152326) do
     t.string   "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "menu_id"
   end
 
   create_table "questions", :force => true do |t|

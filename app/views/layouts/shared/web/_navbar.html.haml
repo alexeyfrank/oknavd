@@ -8,9 +8,9 @@
           %span.icon-bar
         = link_to '', root_path, class: 'brand'
         %ul.nav.nav-collapse
-          %li= link_to "Окна и двери", page_path(:about)
-          %li= link_to "Услуги и сервис", page_path(:contacts)
-          %li= link_to "Наши преимущества", new_question_path
-          %li= link_to "Компания", new_question_path
-          %li= link_to "Где купить", new_question_path
-          %li= link_to "Контакты", new_question_path
+          %li= link_to "Окна и двери", page_path(:product)
+          %li= link_to "Услуги и сервис", page_path(:services)
+          %li= link_to "Наши преимущества", page_path(:advantages)
+          %li= link_to "Компания", page_path(:company)
+          %li= link_to "Где купить", page_path(:offices)
+          %li= link_to "Контакты", page_path(:contacts)

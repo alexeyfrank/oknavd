@@ -1,6 +1,8 @@
 class Page < ActiveRecord::Base
   include PageRepository
 
+  belongs_to :menu
+
   attr_accessible :content, :slug, :title
   validates :title, presence: true, length: { maximum: 255 }
   validates :slug, presence: true, slug: true, length: { maximum: 255 }

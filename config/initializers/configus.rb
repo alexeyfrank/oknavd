@@ -4,10 +4,12 @@ Configus.build Rails.env do
   env :production do
     pages_hash = {
         main: 'Главная страница',
-        about: 'О компании',
+        product: 'Окна и двери',
+        services: 'Услуги и сервис',
+        advantages: 'Наши преимущества',
+        company: 'Компания',
+        offices: 'Где купить',
         contacts: 'Контакты',
-        price: 'Прайс-лист',
-        partners: 'Портфолио партнеров',
     }
     pages pages_hash.to_a
   end

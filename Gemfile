@@ -27,6 +27,7 @@ gem 'ransack'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'ckeditor'
+gem 'cocoon'
 
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'

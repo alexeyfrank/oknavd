@@ -18,7 +18,8 @@
     .blue-bg
     = render 'layouts/shared/web/header'
     = render 'layouts/shared/web/navbar'
-    = render 'layouts/shared/web/news'
+    - if @page && @page.slug.eql?('main')
+      = render 'layouts/shared/web/news'
 
     .container.content
       .row

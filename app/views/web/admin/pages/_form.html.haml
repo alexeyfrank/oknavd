@@ -2,6 +2,7 @@
   = f.input :state_event, as: :state_event
   = f.input :title
   = f.input :slug
+  = f.input :menu_id, as: :select, collection: Menu.all
   = f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }
 
   =f.submit

@@ -2,11 +2,11 @@
   .row-fluid.custom-header
     .span4
       .left-btns
-        = link_to '', "/measure/", class: 'measure-btn'
+        = link_to '', new_measure_path, class: 'measure-btn'
         = link_to '', "/consult/", class: 'consult-btn'
 
     .span5
-      Логотип
+      = link_to '', root_path, class: 'logo-btn'
 
     .span3
       .right-text

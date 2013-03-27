@@ -1,0 +1,38 @@
+.page-header
+  %h1=t('.title')
+  
+= simple_form_for @search, url: admin_menus_path, method: :get do |f|
+  %table.table
+    %thead
+      %tr
+        %td
+          = f.input_field :title_cont, placeholder: Menu.human_attribute_name(:title), label: false, required: false
+        %td
+          = f.input_field :slug_cont, placeholder: Menu.human_attribute_name(:slug), label: false, required: false
+        %td
+          = f.submit t(".search"), :class => 'btn btn-primary' 
+
+= link_to t('.new'), new_admin_menu_path, class: 'btn btn-primary'
+    
+= paginate @items
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link(@search, :id, Menu.human_attribute_name(:id))
+      %th= sort_link(@search, :slug, Menu.human_attribute_name(:slug))
+      %th= sort_link(@search, :title, Menu.human_attribute_name(:title))
+      %th= sort_link(@search, :created_at, Menu.human_attribute_name(:created_at))
+      %th= t(".actions")
+  %tbody
+    - @items.each do |item|
+      %tr
+        %td= link_to item.id, admin_menu_path(item)
+        %td= item.slug
+        %td= item.title
+        %td= l item.created_at
+        %td
+          = link_to t('.edit'), [:edit, :admin, item], class: 'btn btn-mini'
+          = link_to t('.destroy'), [:admin, item], method: :delete, data: { confirm: t('.confirm') }, class: 'btn btn-mini btn-danger'
+= paginate @items
+
+= link_to t('.new'), new_admin_menu_path, class: 'btn btn-primary'
