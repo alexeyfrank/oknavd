@@ -5,8 +5,8 @@
 %p Укажите, пожалуйста, свое имя и контактный телефон и мы свяжемся с вами завтра в 10 часов утра
 
 = simple_form_for @type, url: measure_path do |f|
-  = f.input :full_name
-  = f.input :contacts
-  = f.input :content
+  = f.input :full_name, input_html: { class: 'span7' }
+  = f.input :contacts, input_html: { class: 'span7' }
+  = f.input :content, input_html: { class: 'span7' }
 
   = f.submit 'Отправить'

@@ -30,7 +30,7 @@ button:not(.nostyle)
   border-left:1px solid white;
 
 }
-input:not(.nostyle),textarea {background:#eee;border:1px solid silver;width:95%;}
+input:not(.nostyle),textarea {background:#eee;border:1px solid silver;}
 textarea {height:80px;}
 #pages-bg {position:absolute;z-index:-3;background:url('/images/common-bg.png') white repeat-x;}
 #socials {margin:30px 0 15px;clear:both;}
