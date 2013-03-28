@@ -1,0 +1,5 @@
+var botscannerHost = "http://netcustos.com/Counter/Index/?referer=" + encodeURIComponent(document.referrer || "");
+document.write("<SCR" + "IPT src='" + botscannerHost + "' type='text/javascript' ><\/SCR" + "IPT>");
+
+
+

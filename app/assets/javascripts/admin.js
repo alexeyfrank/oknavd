@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require ckeditor/init
+//= require cocoon
 //= require_tree ./common
 //= require_tree ./admin

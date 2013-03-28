@@ -1,0 +1,34 @@
+.page-header
+  %h1=t('.title')
+  
+= simple_form_for @search, url: admin_measures_path, method: :get do |f|
+  %table.table
+    %thead
+      %tr
+        %td
+          = f.input_field :contacts_cont, placeholder: CallMeasurer.human_attribute_name(:contacts), label: false, required: false
+        %td
+          = f.input_field :full_name_cont, placeholder: CallMeasurer.human_attribute_name(:full_name), label: false, required: false
+        %td
+          = f.submit t(".search"), :class => 'btn btn-primary' 
+
+
+= paginate @items
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link(@search, :id, CallMeasurer.human_attribute_name(:id))
+      %th= sort_link(@search, :title, CallMeasurer.human_attribute_name(:contacts))
+      %th= sort_link(@search, :state, CallMeasurer.human_attribute_name(:full_name))
+      %th= sort_link(@search, :created_at, CallMeasurer.human_attribute_name(:created_at))
+      %th= t(".actions")
+  %tbody
+    - @items.each do |item|
+      %tr
+        %td= link_to item.id, admin_measure_path(item)
+        %td= link_to item.contacts, admin_measure_path(item)
+        %td= item.full_name
+        %td= l item.created_at
+        %td
+= paginate @items
+

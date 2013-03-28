@@ -20,11 +20,14 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "МДМ Стандарт", admin_root_path, class: :brand
+          = link_to "Окна Вашего Дома", admin_root_path, class: :brand
           .nav-collapse
             %ul.nav
               %li= link_to "Пользователи", admin_users_path
               %li= link_to "Страницы", admin_pages_path
+              %li= link_to "Меню", admin_menus_path
+              %li= link_to "Новости", admin_news_index_path
+              %li= link_to "Вызовы замерщика", admin_measures_path
               %li= link_to "Обратная связь", admin_questions_path
 
           %ul.nav.pull-right.nav-collapse
@@ -47,7 +50,10 @@
             %ul.nav.nav-list
               %li= link_to "На сайт", root_path
               %li= link_to "Пользователи", admin_users_path
+              %li= link_to "Меню", admin_menus_path
               %li= link_to "Страницы", admin_pages_path
+              %li= link_to "Новости", admin_news_index_path
+              %li= link_to "Вызовы замерщика", admin_measures_path
               %li= link_to "Обратная связь", admin_questions_path
 
       %br

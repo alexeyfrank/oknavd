@@ -1,0 +1,829 @@
+@charset "utf-8";
+.rh-reset.rh-reset.rh-reset.rh-reset.rh-reset.rh-reset.rh-reset.rh-reset {
+	position: relative;
+	left: auto;
+	right: auto;
+	top: auto;
+	bottom: auto;
+	margin: 0;
+	padding: 0;
+	border: none 0;
+	font-size: 12px;
+	vertical-align: baseline;
+	background: none;
+	color: black;
+	line-height: 1.167em;
+	outline: none;
+	text-transform: none;
+    text-decoration: none;
+}
+a.rh-reset, span.rh-reset {
+	display: inline;
+	width: auto;
+}
+div.rh-reset {
+	display: block;
+}
+#rh-loadCss {
+	z-index: 1;   
+	position: fixed; 
+}
+#rh-setup {}
+#rh-snippet {}
+#rh-frameWrapper iframe {
+	width: 100%;
+	height: 100%;
+}
+#rh-colorifier {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: none;
+    display: none;
+	opacity: 0.1;
+}
+#rh-chat {
+	position: fixed;
+	z-index: 999990;
+    font-size: 12px;
+}
+#rh-chatWindow {
+	position: absolute;
+}
+#rh-chatFrame {
+	position: relative;
+	z-index: 1;
+    display: block !important;
+}
+#rh-block {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999992;
+	background: #ccc;
+	-moz-opacity: 0.01;
+	-khtml-opacity: 0.01;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=1);
+	opacity: 0.01;
+}
+#rh-frameHelper {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999995;
+    background: #ccc;
+    -moz-opacity: 0.01;
+    -khtml-opacity: 0.01;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=1);
+    opacity: 0.01;
+}
+.rh-draggable {
+    z-index: 999995;
+}
+#rh-resizeBoth {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	cursor: se-resize;
+	background: url(../../images/mac/components.png) no-repeat -38px -22px;
+	z-index: 999999;
+}
+#rh-maximize a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#rh-notification {
+	position: fixed;
+	padding:  10px 30px 10px 20px;
+	text-align: center;
+	z-index: 999991;
+}
+#rh-copy {
+    position: absolute;
+    bottom: 0.283em;
+    width: 100%;
+    text-align: center;
+    z-index: 999998;
+    font-family: arial, sans-serif;
+    outline: none;
+    color: #aaa;
+}
+.rh-free #rh-copy, .rh-free #rh-copy .rh-textWrapper {
+	font-size: 0.817em;
+	color: #999;
+}
+#rh-copy, #rh-copy .rh-textWrapper {
+    font-size: 0.817em;
+    color: #999;
+}
+#rh-copy > span {
+    font-size: 1em !important;
+}
+.rh-free #rh-copy a {
+	
+}
+.rh-free #rh-copy a span {
+	color: #BB2626;
+}
+#rh-copy > a {
+    text-decoration: underline !important;
+    color: #555;
+    font-size: 0.977em !important;
+	opacity: 0.8;
+}
+#rh-copy > a > span {
+    color: #BB2626;
+    font-size: 100% !important;
+}
+#rh-copy a:hover {
+	text-decoration: underline !important;
+	opacity: 1;
+}
+#rh-snippet {
+	font-family: "Segoe UI", Tahoma, Arial, Verdana, sans-serif;
+}
+#rh-badge {
+	position: fixed;
+	z-index: 99990;
+}
+#rh-badge .rh-inner {
+	position: relative;
+}
+#rh-badge .rh-inner:hover {
+}
+#rh-badge.rh-left .rh-inner:hover {
+	right: -5%;
+}
+#rh-badge.rh-right .rh-inner:hover {
+	left: -5%;
+}
+#rh-badge.rh-bottom .rh-inner:hover {
+	top: -5%;
+}
+#rh-badgeContent {
+	display: none;
+}
+#rh-badge .rh-inner {
+	margin:  1px;
+	font-family: "Segoe UI", Tahoma, Arial, Verdana, sans-serif;
+}
+	#rh-badge.rh-bottom .rh-inner {
+		left: 0;
+		top: 0;
+	}
+	#rh-badge.rh-right .rh-inner {
+		left: 0;
+		top: 0;
+	}
+	#rh-badge.rh-left .rh-inner {
+		left: auto;
+		right: 0;
+		top: 0;
+	}
+#rh-badge.active .rh-inner {}
+#rh-badge.active.blink .rh-inner {}
+#rh-badge svg,
+#rh-badge img {
+	cursor: pointer;
+}
+#rh-notification {
+	top: 20px;
+	left: 20px;
+	background: #fffff7;
+	border: 1px solid #ddddd7;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	width: 130px;
+}
+#rh-notification .message {
+	width: 130px;
+}
+#rh-notification .close {
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	background: url("../../images/mac/components.png") -4px -4px;
+}
+#rh-notification .close:hover {
+	background: url("../../images/mac/components.png") -4px -4px;
+}
+#rh-chat {
+	top: 30%;
+	left: 200px;
+	width: 290px;
+	height: 380px;
+	min-width: 260px;
+	min-height: 300px;
+	box-shadow: #555 0 3px 8px;
+	border:  none;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+}
+	.rh-bottom #rh-chat {
+		top: auto;
+		left: auto;
+		right: 25%;
+		bottom: 50px;
+	}
+	.rh-right #rh-chat {
+		left: auto;
+		right: 200px;
+		bottom: auto;
+	}
+.rh-stateOffline #rh-chat {
+}
+#rh-chatInnerWrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
+#rh-chatTop {
+	display: none;
+}
+#rh-chatWindow {
+	top: 1px;
+	bottom: 1px;
+	left: 1px;
+	right: 1px;
+}
+#rh-frameWrapper {
+	position: absolute;
+	top: 1.75em;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 0 0 0.25em 0.25em;
+	-moz-border-radius: 0 0 0.25em 0.25em;
+	overflow:  hidden;
+	background: #ccc;
+}
+#rh-topPanel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1.667em;
+	background: repeat-x url("../../images/mac/topbg.png") #ccc;
+	border-bottom: 0.13em solid #8E8E8E;
+	border-radius: 0.25em 0.25em 0 0;
+	-moz-border-radius: 0.25em 0.25em 0 0;
+}
+#rh-chatBack {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #999999;
+	-moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+#rh-chatShadow {
+	position: absolute;
+	top: -4px;
+	bottom: -2px;
+	left: -7px;
+	right: 0;
+	background: #000;
+	-moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+#rh-close {
+	position: absolute;
+	right: 0.5em;
+	top: 0.334em;
+	left: auto;
+	width: 1.167em;
+	height: 1.167em;
+    text-align: center;
+	background: no-repeat url("../../images/mac/components.png") -6.7em 0.08em;
+    background-size: 19em;
+	z-index: 999996;
+}
+#rh-close:hover, #rh-close.hover {
+	background: no-repeat url("../../images/mac/components.png") -6.7em -1.1em;
+    background-size: 19em;
+}
+#rh-close.pressed {
+	background: no-repeat url("../../images/mac/components.png") -6.7em -2.333em;
+    background-size: 19em;
+}
+#rh-close.rh-text {
+    background: none;
+}
+#rh-sound.rh-text {
+    background: none;
+    text-decoration: none;
+    width: 4em;
+}
+#rh-sound.rh-text.rh-soundOff {
+    text-decoration: line-through;
+    background: none;
+}
+#rh-sound {
+	transition: opacity 0.2s;
+	-moz-transition: -moz-opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	position: absolute;
+	left: 0.667em;
+	top: 0.334em;
+	width: 1.167em;
+	height: 1.167em;
+	z-index: 999996;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	background: no-repeat url("../../images/mac/components.png") -7.833em 0.1em;
+    background-size: 19em;
+}
+#rh-sound:hover {
+	opacity: 0.9;
+	-moz-opacity: 0.9;
+}
+#rh-sound.rh-soundOff {
+	background: no-repeat url("../../images/mac/components.png") -7.833em -1.167em;
+    background-size: 19em;
+}
+#rh-invitation {
+	position: fixed;
+	overflow: hidden;
+	z-index: 99990;
+	top: 0;
+	left: 0;
+	width: 265px;
+	height: 110px;
+	background: #fff;
+	border: 2px solid #BCBCBC;
+	font-size: 12px;
+	cursor: default;
+	color: #aaa;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+	.rh-bottom #rh-invitation {
+		left: auto;
+		right: 0;
+		margin-top: -65px;
+	}
+	.rh-right #rh-invitation {
+		left: auto !important;
+		right: -4px;
+	}
+    #rh-arrow #rh-invitation {
+        margin-top: 0;
+        right: auto;
+        left: 0 !important;
+    }
+#rh-invWrapper {
+	position: absolute;
+	left: 12px;
+	top: 10px;
+	bottom: 10px;
+	right: 15px;
+	overflow: hidden;
+}
+	.rh-right #rh-invWrapper {
+		left: 25px;
+	}
+#rh-invCenter {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+#rh-upbutton{
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 17px;
+	background: #B5BCC5 no-repeat url("../../images/mac/components.png") 0 50%;
+    background-size: 19em;
+	cursor: pointer;
+}
+	.rh-bottom #rh-upbutton{
+		top: 0;
+		right: 0;
+		width: 20px;
+		height: 20px;
+		border:  1px solid #ddd;
+		box-shadow: -1px 1px 0 #aaa;
+		border-radius: 0 0 0 6px;
+		-moz-border-radius: 0 0 0 6px;
+		background: #B5BCC5 no-repeat url("../../images/mac/components.png") -40px 2px;
+        background-size: 19em;
+		cursor: pointer;
+	}
+	.rh-right #rh-upbutton{
+		right: auto;
+		left: 0;
+		background: #B5BCC5 no-repeat url("../../images/mac/components.png") -22px 50%;
+        background-size: 19em;
+	}
+#rh-upbutton:hover{
+	background: #C5C5BC no-repeat url("../../images/mac/components.png") 0 50%;
+    background-size: 19em;
+}
+	.rh-bottom #rh-upbutton:hover{
+		background: #C5C5BC no-repeat url("../../images/mac/components.png") -40px 2px;
+        background-size: 19em;
+	}
+	.rh-right #rh-upbutton:hover{
+		background: #C5C5BC no-repeat url("../../images/mac/components.png") -22px 50%;
+        background-size: 19em;
+	}
+#rh-face {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#rh-face img {
+	width: 85px;
+	border: 1px solid #ccc;
+}
+#rh-choice {
+	position: absolute;
+	bottom: 5px;
+	left: 115px;
+    width: 120px;
+}
+#rh-choice a.rh-btn {
+    display: block;
+    text-align: center;
+    float: left;
+	min-width: 45px;
+	margin: 0 5px 0 0;
+	background: #B5BCC5;
+	border: 1px solid #A0A7B0;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	text-shadow: 0 1px 0 #A0A7B0;
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;
+	cursor: pointer;
+    text-decoration: none;
+}
+#rh-choice a.rh-btn:hover{
+	background: #BCBCBC;
+	border: 1px solid #888888;
+	text-shadow: 0 0 1px #fff;
+    text-decoration: none;
+}
+#rh-invWelcomeFrame {
+	position: absolute;
+	top: 0;
+	left: 100px;
+	bottom: 25px;
+	width: 125px;
+	overflow: hidden;
+	text-align: center;
+}
+#rh-arrow {
+	position: fixed;
+	background: url("../../../chat/images/mac/onlineBack.png") repeat-x #efefef;
+	border: 5px solid #ccc;
+	display: none;
+	z-index: 99987;
+	padding: 10px;
+	border-radius: 10px;
+	font-family: "Trebuchet MS", Tahoma, Arial,Verdana, sans-serif;
+	font-size: 12px;
+	overflow: visible;
+	width: 166px;
+	text-decoration: none;
+	cursor: pointer;
+}
+#rh-arrow.rh-left {
+	margin-right: 10px;
+}
+#rh-arrow.rh-right {
+	margin-left: 10px;
+}
+#rh-arrow.rh-above {
+	margin-bottom: 10px;
+}
+#rh-arrow.rh-below {
+	margin-top: 10px;
+}
+#rh-arrow.rh-below.rh-left {
+	margin-top: 0;
+	margin-right: 0;
+}
+#rh-arrow.rh-below.rh-right {
+	margin-top: 0;
+	margin-left: 0;
+}
+#rh-arrow.top.rh-left {
+	margin-bottom: 0;
+	margin-right: 0;
+}
+#rh-arrow.top.rh-right {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+#rh-arrow img {
+	float: left;
+	border: 1px solid #CCC;
+	width: 64px;
+}
+#rh-arrow p {
+	float: right;
+	margin: 0;
+	width: 90px;
+	padding-left: 10px;
+}
+#rh-arrow .rh-arrow_itself {
+	position: absolute !important;
+}
+#rh-arrow.rh-above .rh-arrow_itself {
+	bottom: -15px;
+	width: 20px;
+	height: 10px;
+	background: url("../../images/mac/components.png") -128px -30px;
+}
+#rh-arrow.rh-below .rh-arrow_itself {
+	top: -15px;
+	width: 20px;
+	height: 10px;
+	background: url("../../images/mac/components.png") -128px 0px;
+}
+#rh-arrow.rh-left .rh-arrow_itself {
+	right: -15px;
+	width: 10px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -128px -10px;
+}
+#rh-arrow.rh-right .rh-arrow_itself {
+	left:  -15px;
+	width: 10px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -138px -52px;
+}
+#rh-arrow.rh-below.rh-left .rh-arrow_itself {
+	top: -5px;
+	right: -5px;
+	width: 20px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -168px 0px;
+}
+#rh-arrow.rh-below.rh-right .rh-arrow_itself {
+	top: -5px;
+	left: -5px;
+	width: 20px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -148px 0px;
+}
+#rh-arrow.top.rh-left .rh-arrow_itself {
+	bottom: -5px;
+	right: -5px;
+	width: 20px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -168px -20px;
+}
+#rh-arrow.top.rh-right .rh-arrow_itself {
+	bottom: -5px;
+	left: -5px;
+	width: 20px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -148px -20px;
+}
+#rh-arrow a {
+	position: relative;
+	z-index: 100500;
+}
+#rh-arrow .rh-shadow {
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	border: 5px solid #ffc500;
+	z-index: 10001;
+}
+#rh-arrow.rh-above .rh-shadow .rh-arrow_itself {
+	bottom: -15px;
+	width: 20px;
+	height: 10px;
+	background: url("../../images/mac/components.png") -108px -30px;
+}
+#rh-arrow.rh-below .rh-shadow .rh-arrow_itself {
+	top: -15px;
+	width: 20px;
+	height: 10px;
+	background: url("../../images/mac/components.png") -108px 0;
+}
+#rh-arrow.rh-left .rh-shadow .rh-arrow_itself {
+	right: -15px;
+	width: 10px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -108px -10px;
+}
+#rh-arrow.rh-right .rh-shadow .rh-arrow_itself {
+	left:  -15px;
+	width: 10px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -118px -52px;
+}
+#rh-arrow.rh-below.rh-left .rh-shadow .rh-arrow_itself {
+	top: -5px;
+	right: -5px;
+	width: 20px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -208px 0;
+}
+#rh-arrow.rh-below.rh-right .rh-shadow .rh-arrow_itself {
+	top: -5px;
+	left: -5px;
+	width: 20px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -188px 0;
+}
+#rh-arrow.top.rh-left .rh-shadow .rh-arrow_itself {
+	bottom: -5px;
+	right: -5px;
+	width: 20px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -208px -20px;
+}
+#rh-arrow.top.rh-right .rh-shadow .rh-arrow_itself {
+	bottom: -5px;
+	left: -5px;
+	width: 20px;
+	height: 20px;
+	background: url("../../images/mac/components.png") -188px -20px;
+}
+#rh-arrow p.hint {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-size: 10px;
+	color: #888;
+}
+#rh-arrow a.rh-close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: auto;
+	width: 14px;
+	height: 14px;
+	background: no-repeat url("../../images/mac/components.png") -80px 0;
+	z-index: 99993;
+}
+#rh-arrow a.rh-close:hover, #rh-arrow a.rh-close.hover {
+	background: no-repeat url("../../images/mac/components.png") -80px -14px;
+}
+#rh-arrow.rh-outside {
+	margin: 0;
+}
+#rh-arrow.rh-outside .rh-arrow_itself {
+	background: none !important;
+}
+#rh-arrow.rh-outside .rh-arrow_itself div {
+	width: 90px;
+	height: 90px;
+	position: relative;
+}
+#rh-arrow.rh-outside .rh-arrow_itself {
+	background: none;
+}
+#rh-arrow.rh-outside .rh-shadow .rh-arrow_itself {
+	background: none;
+}
+#rh-arrow.rh-outside.rh-left, #rh-arrow.rh-outside.rh-below, #rh-arrow.rh-outside.rh-above {
+	margin-bottom: 0;
+	margin-right: 90px;
+}
+#rh-arrow.rh-outside.rh-right {
+	margin-bottom: 0;
+	margin-left: 90px;
+}
+#rh-arrow.rh-outside.rh-above .rh-arrow_itself, #rh-arrow.rh-outside.rh-below .rh-arrow_itself {
+	right: -95px;
+	top: -5px;
+	width: 90px;
+	height: 90px;
+}
+#rh-arrow.rh-outside.rh-below .rh-arrow_itself {
+	top: 0;
+}
+#rh-arrow.rh-outside.rh-left .rh-arrow_itself {
+	right: -95px;
+	top: -5px;
+	bottom: auto;
+	width: 90px;
+	height: 90px;
+}
+#rh-arrow.rh-outside.rh-right .rh-arrow_itself {
+	left: -95px;
+	top: -5px;
+	bottom: auto;
+	width: 90px;
+	height: 90px;
+}
+#rh-arrow.rh-outside.rh-left.rh-below .rh-arrow_itself, #rh-arrow.rh-outside.rh-left.rh-above .rh-arrow_itself {
+	left: auto;
+	right: -95px;
+	top: 0;
+	bottom: auto;
+	width: 90px;
+	height: 90px;
+}
+#rh-arrow.rh-outside.rh-left.rh-below .rh-arrow_itself {
+	top: -5px;
+}
+#rh-arrow.rh-outside.rh-left.rh-below .rh-arrow_itself {
+	top: -5px;
+}
+#rh-arrow.rh-outside.rh-right.rh-below .rh-arrow_itself, #rh-arrow.rh-outside.rh-right.rh-above .rh-arrow_itself {
+	left: -95px;
+	right: auto;
+	top: -5px;
+	bottom: auto;
+	width: 90px;
+	height: 90px;
+}
+#rh-arrow.rh-outside.rh-right.rh-above .rh-arrow_itself {
+	top: 0;
+}
+#rh-arrow.rh-outside.rh-above .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) 0 -90px no-repeat;
+}
+#rh-arrow.rh-outside.rh-below .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -180px -90px no-repeat;
+}
+#rh-arrow.rh-outside.rh-left .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -270px -90px no-repeat;
+}
+#rh-arrow.rh-outside.rh-right .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -90px -90px no-repeat;
+}
+#rh-arrow.rh-outside.rh-above.rh-left .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -180px 0 no-repeat;
+}
+#rh-arrow.rh-outside.rh-above.rh-right .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -90px 0 no-repeat;
+}
+#rh-arrow.rh-outside.rh-below.rh-right .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) 0 0 no-repeat;
+}
+#rh-arrow.rh-outside.rh-below.rh-left .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -270px 0 no-repeat;
+}
+#rh-arrow.rh-outside.rh-above .rh-shadow .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) 0 -270px no-repeat;
+}
+#rh-arrow.rh-outside.rh-below .rh-shadow .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -180px -270px no-repeat;
+}
+#rh-arrow.rh-outside.rh-left .rh-shadow .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -270px -270px no-repeat;
+}
+#rh-arrow.rh-outside.rh-right .rh-shadow .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -90px -270px no-repeat;
+}
+#rh-arrow.rh-outside.rh-above.rh-left .rh-shadow .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -180px -180px no-repeat;
+}
+#rh-arrow.rh-outside.rh-above.rh-right .rh-shadow .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -90px -180px no-repeat;
+}
+#rh-arrow.rh-outside.rh-below.rh-right .rh-shadow .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) 0 -180px no-repeat;
+}
+#rh-arrow.rh-outside.rh-below.rh-left .rh-shadow .rh-arrow_itself div {
+	background: url(../../images/mac/arrows.png) -270px -180px no-repeat;
+}
+#rh-arrow #rh-invitation {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+}
+#rh-arrow #rh-upbutton {
+    display: none;
+}

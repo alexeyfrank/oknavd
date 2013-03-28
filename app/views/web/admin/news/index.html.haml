@@ -1,0 +1,38 @@
+.page-header
+  %h1=t('.title')
+  
+= simple_form_for @search, url: admin_news_index_path, method: :get do |f|
+  %table.table
+    %thead
+      %tr
+        %td
+          = f.input_field :title_cont, placeholder: News.human_attribute_name(:title), label: false, required: false
+        %td
+          = f.input :state_in, collection: News.state_machine.states.map { |s| [s.human_name, s.name] }, input_html: { data: { placeholder: News.human_attribute_name(:state) }}, label: false, required: false
+        %td
+          = f.submit t(".search"), :class => 'btn btn-primary' 
+
+= link_to t('.new'), new_admin_news_path, :class => 'btn btn-primary'
+    
+= paginate @news
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link(@search, :id, News.human_attribute_name(:id))
+      %th= sort_link(@search, :title, News.human_attribute_name(:title))
+      %th= sort_link(@search, :state, News.human_attribute_name(:state))
+      %th= sort_link(@search, :created_at, News.human_attribute_name(:created_at))
+      %th= t(".actions")
+  %tbody
+    - @news.each do |news|
+      %tr
+        %td= link_to news.id, admin_news_path(news)
+        %td= news.title
+        %td= news.human_state_name
+        %td= l news.created_at
+        %td
+          = link_to t('.edit'), edit_admin_news_path(news), class: 'btn btn-mini'
+          = link_to t('.destroy'), admin_news_path(news), method: :delete, data: { confirm: t('.confirm') }, class: 'btn btn-mini btn-danger'
+= paginate @news
+
+= link_to t('.new'), new_admin_news_path, class: 'btn btn-primary'

@@ -17,6 +17,29 @@ ru:
         slug: 'Ссылка'
         content: 'Содержимое'
         state: 'Состояние'
+        menu: 'Меню'
+        created_at: 'Дата создания'
+      news:
+        state_event: 'Действие'
+        title: 'Название'
+        content: 'Содержимое'
+        preview_image: 'Превью'
+        state: 'Состояние'
+        created_at: 'Дата создания'
+      menu:
+        title: 'Название'
+        slug: 'URL'
+        created_at: 'Дата создания'
+      menu/item:
+        title: 'Название'
+        slug: 'URL'
+        position: 'Позиция'
+        created_at: 'Дата создания'
+      call_measurer:
+        state_event: 'Действие'
+        full_name: 'ФИО'
+        content: 'Содержимое'
+        contacts: 'Контакты'
         created_at: 'Дата создания'
       question:
         full_name: 'ФИО'
@@ -27,6 +50,10 @@ ru:
     errors:
       models:
         user:
+          attributes:
+            email:
+              email: 'Введен некорректный E-mail'
+        question:
           attributes:
             email:
               email: 'Введен некорректный E-mail'

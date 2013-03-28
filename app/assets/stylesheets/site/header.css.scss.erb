@@ -1,0 +1,59 @@
+.custom-header {
+  height:  150px;
+
+  .logo-btn {
+      margin-top: 30px;
+      display: block;
+      width: 362px;
+      height: 86px;
+      background-image: url(<%= asset_path('logo-new.png') %>);
+  }
+
+  .left-btns {
+      margin-top: 30px;
+      .measure-btn {
+          display: block;
+          background-image: url(<%= asset_path('measurer_btn.png') %>);
+          width: 182px;
+          height: 44px;
+          margin-bottom: 15px;
+      }
+
+      .consult-btn {
+          display: block;
+          background-image: url(<%= asset_path('consult-btn.gif') %>);
+          width: 171px;
+          height: 28px;
+      }
+  }
+
+  .right-text {
+      margin-top: 30px;
+      text-align: right;
+
+      .fast-consult-label {
+          color: #b8c5dd;
+          margin-bottom: 10px;
+          font-size: 16px;
+      }
+
+      .phone {
+          font-size: 36px;
+          color:  white;
+          text-align: right;
+          margin-bottom: 10px;
+      }
+
+      .feedback-call-btn {
+          color: #b8c5dd;
+          margin-bottom: 10px;
+          font-size: 16px;
+          border-bottom: 1px dashed;
+
+          &:hover {
+              text-decoration: none;
+              color: #ffffff;
+          }
+      }
+  }
+}

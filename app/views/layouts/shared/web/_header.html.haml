@@ -1,0 +1,16 @@
+.container-fluid
+  .row-fluid.custom-header
+    .span4
+      .left-btns
+        = link_to '', new_measure_path, class: 'measure-btn'
+        = link_to '', "/consult/", class: 'consult-btn'
+
+    .span5
+      = link_to '', root_path, class: 'logo-btn'
+
+    .span3
+      .right-text
+        .fast-consult-label Мы работаем с 9:00 до 21:00
+        .phone 78-307-78
+        %a.feedback-call-btn(href="#") Заказать обратный звонок!
+
