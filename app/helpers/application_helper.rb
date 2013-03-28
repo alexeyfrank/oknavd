@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def news_chunks
-    @news ||= News.web
+    @news ||= News.web.to_a
     news = @news.each_slice(4)
   end
 end
