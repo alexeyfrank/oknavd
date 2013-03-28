@@ -19,13 +19,17 @@
     = render 'layouts/shared/web/header'
     = render 'layouts/shared/web/navbar'
     - if @page && @page.slug.eql?('main')
-      = render 'layouts/shared/web/news'
+      .container
+        .row
+          .span9.price
+            = render 'layouts/shared/web/price'
+          .span3.news
+            = render 'layouts/shared/web/news'
 
-    .container.content
+    .container#content
       .row
-        .span12
-          = bootstrap_flash
-          = yield
+        = bootstrap_flash
+        = yield
 
     = render 'layouts/shared/web/footer_company'
 

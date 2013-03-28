@@ -1,14 +1,19 @@
-.container.news
-  #newsCarousel.carousel.slide
-    .carousel-inner
-      - news_chunks.each do |chunk|
-        .item
-          - chunk.each do |item|
-            .news-block
-              = link_to item do
-                - if item.preview_image
-                  = image_tag item.preview_image.url
-                %span= item.title
+%h3.header Новости
+.content
+  - news_items.each do |n|
+    .news-block
+      = image_tag n.preview_image.url
+      = link_to n.title, news_path(n)
 
-    = link_to '', '#newsCarousel', class: 'carousel-control left', data: {slide: 'prev' }
-    = link_to '', '#newsCarousel', class: 'carousel-control right', data: {slide: 'next' }
+    -#
+    -#  - news_chunks.each do |chunk|
+    -#    .item
+    -#      - chunk.each do |item|
+    -#        .news-block
+    -#          = link_to item do
+    -#            - if item.preview_image
+    -#              = image_tag item.preview_image.url
+    -#            %span= item.title
+    -#
+    -#= link_to '', '#newsCarousel', class: 'carousel-control left', data: {slide: 'prev' }
+    -#= link_to '', '#newsCarousel', class: 'carousel-control right', data: {slide: 'next' }

@@ -5,8 +5,7 @@ module ApplicationHelper
     render 'web/shared/submenu', items: items
   end
 
-  def news_chunks
-    @news ||= News.web.to_a
-    news = @news.each_slice(4)
+  def news_items
+    @news ||= News.web
   end
 end
