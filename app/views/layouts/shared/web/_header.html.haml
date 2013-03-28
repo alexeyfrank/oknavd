@@ -16,7 +16,7 @@
       .right-text
         .fast-consult-label Мы работаем с 9:00 до 21:00
         .phone 78-307-78
-        %a.feedback-call-btn.clearfix(href="#") Заказать обратный звонок!
+        = link_to 'Заказать обратный звонок!', new_question_path, class: 'feedback-call-btn clearfix'
         %a.email-btn(href="mailto:info@oknavd.ru")
           %i.icon-envelope
           info@oknavd.ru

@@ -18,6 +18,9 @@
     .blue-bg
     = render 'layouts/shared/web/header'
     = render 'layouts/shared/web/navbar'
+    .container
+      = bootstrap_flash
+
     - if @page && @page.slug.eql?('main')
       .container
         .row
@@ -28,7 +31,6 @@
 
     .container#content
       .row
-        = bootstrap_flash
         = yield
 
     = render 'layouts/shared/web/footer_company'
