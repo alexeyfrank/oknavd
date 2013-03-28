@@ -10,6 +10,7 @@ Configus.build Rails.env do
         company: 'Компания',
         offices: 'Где купить',
         contacts: 'Контакты',
+        :'client-feedbacks' => 'Отзывы заказчиков'
     }
     pages pages_hash.to_a
   end

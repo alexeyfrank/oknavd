@@ -10,7 +10,7 @@ body {font:11pt Arial;line-height:1.3em;background:#8dc63f url('/images/backgr.j
 a {color:#367fbd;}
 a:hover {color:#690;}
 img {border:none;}
-button:not(.nostyle),input:not(.nostyle),textarea
+button:not(.nostyle, .close),input:not(.nostyle),textarea
   {
   border-radius:8px;
   -moz-border-radius:8px;
@@ -20,7 +20,7 @@ button:not(.nostyle),input:not(.nostyle),textarea
   -webkit-box-shadow:0 0 4px 2px silver;
 }
 
-button:not(.nostyle)
+button:not(.nostyle, .close)
   {
   cursor:pointer;
   padding:.3em .5em;
