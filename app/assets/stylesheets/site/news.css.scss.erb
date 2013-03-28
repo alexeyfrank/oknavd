@@ -3,30 +3,32 @@
     border-radius: $angle;
 }
 
-.container.news {
-    margin-top: -35px;
-    height: 200px;
+.news {
+    /*margin-top: -35px;*/
+    /*height: 200px;*/
     background-color: white;
     @include border-radius(10px);
-    margin-bottom: 25px;
-    padding: 25px;
+    min-height: 200px;
+    margin-bottom: 15px;
 
-    .carousel-control {
-        background: transparent;
-        border: 0;
-        width:  39px;
-        height: 62px;
-        margin-top: 70px;
+    .header {
+        padding-left: 10px;
+        color: #690;
+        border-bottom: 2px solid #690;
     }
-    .left {
-        background-image: url(<%= asset_path('l_ar.png') %>);
-    }
-    .right {
-        background-image: url(<%= asset_path('r_ar.png') %>);
-    }
-
     .news-block {
-        display: inline;
-        width: 250px;
+        margin: 15px;
+        border-bottom: 1px dashed #ccc;
+
+        img {
+            display: block;
+            width: 160px;
+            height: 130px;
+            margin: 0 auto 10px auto;
+        }
+
+        a {
+            padding-bottom: 10px;
+        }
     }
 }
