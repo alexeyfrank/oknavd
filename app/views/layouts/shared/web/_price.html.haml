@@ -2,57 +2,24 @@
   %h3 Прайс-лист
 
   .items
-    .item.well
-      .row
-        .span2
-          = image_tag asset_path('okna/three.png')
-        .span6
-          %h5 Зал, 2100x1400, двойной стеклопакет (3 стекла)
+    - products_items.each do |item|
+      .item.well
+        .row
+          .span2
+            = image_tag item.preview_image.url
+          .span6
+            %h5 #{item.title}, #{item.size}, #{item.options}
 
-          %table.table.table-striped
-            %thead
-              %tr
-                %th Профиль
-                %th Кирпичный дом
-                %th Панельный дом
+            %table.table.table-striped
+              %thead
+                %tr
+                  %th Профиль
+                  %th Кирпичный дом
+                  %th Панельный дом
 
-            %tbody
-              %tr
-                %td SALAMANDR 2D 60
-                %td 14 000
-                %td 14 000
-              %tr
-                %td SALAMANDR 2D 60
-                %td 14 000
-                %td 14 000
-              %tr
-                %td SALAMANDR 2D 60
-                %td 14 000
-                %td 14 000
-    .item.well
-      .row
-        .span2
-          = image_tag asset_path('okna/three.png')
-        .span6
-          %h5 Зал, 2100x1400, двойной стеклопакет (3 стекла)
-
-          %table.table.table-striped
-            %thead
-              %tr
-                %th Профиль
-                %th Кирпичный дом
-                %th Панельный дом
-
-            %tbody
-              %tr
-                %td SALAMANDR 2D 60
-                %td 14 000
-                %td 14 000
-              %tr
-                %td SALAMANDR 2D 60
-                %td 14 000
-                %td 14 000
-              %tr
-                %td SALAMANDR 2D 60
-                %td 14 000
-                %td 14 000
+              %tbody
+                - item.profiles.each do |profile|
+                  %tr
+                    %td= profile.title
+                    %td= profile.brick_house_cost
+                    %td= profile.panel_house_cost

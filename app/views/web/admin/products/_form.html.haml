@@ -1,0 +1,17 @@
+= simple_form_for [:admin, @item] do |f|
+  = f.input :state_event, as: :state_event
+  = f.input :title
+  = f.input :size
+  = f.input :options
+  = f.input :preview_image, as: :image_preview
+
+  %h4 Профили
+  #items
+    = f.simple_fields_for :profiles do |item|
+      = render 'profile_fields', f: item
+
+  = link_to_add_association 'Добавить профиль', f, :profiles, class: 'btn btn-info',
+     data: { association_insertion_node: '#items', association_insertion_method: 'append' }
+
+
+  = f.submit class: 'btn btn-primary'

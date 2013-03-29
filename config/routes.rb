@@ -15,6 +15,7 @@ MdmStandart::Application.routes.draw do
       root to: "welcome#index"
 
       resources :menus
+      resources :products
       resources :users
       resources :pages
       resources :news
