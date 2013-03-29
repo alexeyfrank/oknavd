@@ -7,7 +7,7 @@ module ProductRepository
     scope :inactive, -> { where state: :inactive }
     scope :trashed, -> { where state: :trashed }
 
-    scope :web, -> { active.by_created_at }
+    scope :web, -> { by_created_at.active }
     scope :admin, -> { by_created_at }
   end
 end
