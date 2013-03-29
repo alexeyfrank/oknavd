@@ -8,4 +8,8 @@ module ApplicationHelper
   def news_items
     @news ||= News.web
   end
+
+  def products_items
+    @products ||= Product.web
+  end
 end

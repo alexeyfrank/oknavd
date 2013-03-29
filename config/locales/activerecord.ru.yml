@@ -3,6 +3,8 @@ ru:
     models:
       user: 'пользователя'
       page: 'страницу'
+      news: 'новость'
+      menu: 'меню'
     attributes:
       user:
         email: 'E-mail'
@@ -34,6 +36,17 @@ ru:
         title: 'Название'
         slug: 'URL'
         position: 'Позиция'
+        created_at: 'Дата создания'
+      product:
+        title: 'Название'
+        size: 'Размеры'
+        options: 'Доп. информация'
+        state: 'Статус'
+        created_at: 'Дата создания'
+      product/profile:
+        title: 'Название'
+        brick_house_cost: 'Кирпичный дом'
+        panel_house_cost: 'Панельный дом'
         created_at: 'Дата создания'
       call_measurer:
         state_event: 'Действие'

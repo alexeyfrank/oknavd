@@ -1,0 +1,45 @@
+.page-header
+  %h1=t('.title')
+  
+= simple_form_for @search, url: admin_products_path, method: :get do |f|
+  %table.table
+    %thead
+      %tr
+        %td
+          = f.input_field :title_cont, placeholder: Product.human_attribute_name(:title), label: false, required: false
+        %td
+          = f.input_field :size_cont, placeholder: Product.human_attribute_name(:size), label: false, required: false
+        %td
+          = f.input_field :options_cont, placeholder: Product.human_attribute_name(:options), label: false, required: false
+        %td
+          = f.input :state_in, collection: Product.state_machine.states.map { |s| [s.human_name, s.name] }, input_html: { data: { placeholder: Product.human_attribute_name(:state) }}, label: false, required: false
+
+        %td
+          = f.submit t(".search"), :class => 'btn btn-primary' 
+
+= link_to t('.new'), new_admin_product_path, class: 'btn btn-primary'
+    
+= paginate @items
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link(@search, :id, Product.human_attribute_name(:id))
+      %th= sort_link(@search, :title, Product.human_attribute_name(:title))
+      %th= sort_link(@search, :size, Product.human_attribute_name(:size))
+      %th= sort_link(@search, :state, Product.human_attribute_name(:state))
+      %th= sort_link(@search, :created_at, Product.human_attribute_name(:created_at))
+      %th= t(".actions")
+  %tbody
+    - @items.each do |item|
+      %tr
+        %td= link_to item.id, edit_admin_product_path(item)
+        %td= item.title
+        %td= item.size
+        %td= item.human_state_name
+        %td= l item.created_at
+        %td
+          = link_to t('.edit'), [:edit, :admin, item], class: 'btn btn-mini'
+          = link_to t('.destroy'), [:admin, item], method: :delete, data: { confirm: t('.confirm') }, class: 'btn btn-mini btn-danger'
+= paginate @items
+
+= link_to t('.new'), new_admin_product_path, class: 'btn btn-primary'
