@@ -2,13 +2,14 @@
   %h3 Прайс-лист
 
   .items
-    - products_items.each do |item|
+    - products_items.each do |p|
       .item.well
         .row
           .span2
-            = image_tag item.preview_image.url
+            - if p.preview_image.url
+              = image_tag p.preview_image.url
           .span6
-            %h5 #{item.title}, #{item.size}, #{item.options}
+            %h5 #{p.title}, #{p.size}, #{p.options}
 
             %table.table.table-striped
               %thead
@@ -18,7 +19,7 @@
                   %th Панельный дом
 
               %tbody
-                - item.profiles.each do |profile|
+                - p.profiles.each do |profile|
                   %tr
                     %td= profile.title
                     %td= profile.brick_house_cost
