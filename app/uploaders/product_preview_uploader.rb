@@ -4,7 +4,7 @@ class ProductPreviewUploader < CarrierWave::Uploader::Base
   storage :file
 
   def store_dir
-    "uploads/products/#{mounted_as}/#{model.id}"
+    "system/uploads/products/#{mounted_as}/#{model.id}"
   end
 
 end
