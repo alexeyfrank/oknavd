@@ -12,4 +12,9 @@ module ApplicationHelper
   def products_items
     @products ||= Product.web
   end
+
+  def settings(key)
+    @settings ||= SiteSettings.first
+    @settings.send(key)
+  end
 end

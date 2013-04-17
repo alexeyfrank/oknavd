@@ -10,7 +10,8 @@
       = link_to '', root_path, class: 'logo-btn'
 
     .span4.logo-box
-      = link_to '', root_path, class: 'banner-btn'
+      - if settings :show_banner
+        %img.banner-btn(src="#{settings(:banner_url)}")
 
     .span2.right
       .right-text

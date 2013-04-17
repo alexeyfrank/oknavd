@@ -13,6 +13,9 @@ ru:
         state: 'Состояние'
         state_event: 'Действие'
         created_at: 'Дата создания'
+      site_settings:
+        banner: 'Изображение баннера'
+        show_banner: 'Показывать баннер'
       page:
         state_event: 'Действие'
         title: 'Название'

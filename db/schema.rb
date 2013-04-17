@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130329060305) do
+ActiveRecord::Schema.define(:version => 20130417203506) do
 
   create_table "call_measurers", :force => true do |t|
     t.string   "full_name"
@@ -105,6 +105,13 @@ ActiveRecord::Schema.define(:version => 20130329060305) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "site_settings", :force => true do |t|
+    t.string   "banner"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.boolean  "show_banner"
   end
 
   create_table "users", :force => true do |t|

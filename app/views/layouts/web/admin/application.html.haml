@@ -20,7 +20,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "Окна Вашего Дома", admin_root_path, class: :brand
+          -#= link_to "Окна Вашего Дома", admin_root_path, class: :brand
           .nav-collapse
             %ul.nav
               %li= link_to "Прайс-лист", admin_products_path
@@ -30,6 +30,7 @@
               %li= link_to "Новости", admin_news_index_path
               %li= link_to "Вызовы замерщика", admin_measures_path
               %li= link_to "Обратная связь", admin_questions_path
+              %li= link_to "Настройки", edit_admin_settings_path
 
           %ul.nav.pull-right.nav-collapse
             %li.divider-vertical
@@ -50,6 +51,7 @@
             %h3 Меню
             %ul.nav.nav-list
               %li= link_to "На сайт", root_path
+              %li= link_to "Настройки сайта", edit_admin_settings_path
               %li= link_to "Пользователи", admin_users_path
               %li= link_to "Меню", admin_menus_path
               %li= link_to "Страницы", admin_pages_path

@@ -1,5 +1,7 @@
 MdmStandart::Application.routes.draw do
 
+  get "settings/edit"
+
   mount Ckeditor::Engine => '/ckeditor'
 
   scope module: :web do
@@ -22,6 +24,8 @@ MdmStandart::Application.routes.draw do
       resources :measures
       resources :feedbacks
       resources :questions
+
+      resource :settings, only: [:edit, :update]
     end
   end
 end

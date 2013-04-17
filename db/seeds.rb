@@ -14,3 +14,5 @@ configus.pages.each do |value|
   page.save
   page.activate
 end
+
+SiteSettings.create()

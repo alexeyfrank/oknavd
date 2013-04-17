@@ -1,0 +1,9 @@
+%h1 Настройки сайта
+
+= simple_form_for @settings, url: admin_settings_path(@settings), html: {class: 'form-horizontal'} do |f|
+  %fieldset
+    %legend Баннер
+    = f.input :banner, as: :image_preview
+    = f.input :show_banner, as: :radio
+
+  = f.submit 'Сохранить', class: 'btn btn-primary'
