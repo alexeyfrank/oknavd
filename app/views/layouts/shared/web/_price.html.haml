@@ -3,24 +3,24 @@
 
   .items
     - products_items.each do |p|
-      .item.well
+      .item.well.well-small
         .row
           .span2
             - if p.preview_image.url
               = image_tag p.preview_image.url
-          .span5
+          .span6.item-content
             %h5 #{p.title}, #{p.size}, #{p.options}
 
             %table.table.table-striped
               %thead
                 %tr
                   %th Профиль
-                  %th Кирпичный дом
                   %th Панельный дом
+                  %th Кирпичный дом
 
               %tbody
                 - p.profiles.each do |profile|
                   %tr
                     %td= profile.title
-                    %td= profile.brick_house_cost
                     %td= profile.panel_house_cost
+                    %td= profile.brick_house_cost
