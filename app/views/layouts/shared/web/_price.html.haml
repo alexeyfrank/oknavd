@@ -5,7 +5,7 @@
     - products_items.each do |p|
       .item.well.well-small
         .row
-          .span2
+          .span2.image
             - if p.preview_image.url
               = image_tag p.preview_image.url
           .span6.item-content
@@ -19,7 +19,7 @@
                   %th Кирпичный дом
 
               %tbody
-                - p.profiles.each do |profile|
+                - p.profiles.asc_by_created_at.each do |profile|
                   %tr
                     %td= profile.title
                     %td= profile.panel_house_cost
