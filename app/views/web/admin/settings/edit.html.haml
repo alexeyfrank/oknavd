@@ -4,6 +4,7 @@
   %fieldset
     %legend Баннер
     = f.input :banner, as: :image_preview
+    = f.input :banner_link, as: :string
     = f.input :show_banner, as: :radio
 
   = f.submit 'Сохранить', class: 'btn btn-primary'

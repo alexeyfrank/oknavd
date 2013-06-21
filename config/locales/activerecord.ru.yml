@@ -16,6 +16,7 @@ ru:
       site_settings:
         banner: 'Изображение баннера'
         show_banner: 'Показывать баннер'
+        banner_link: 'Ссылка баннера'
       page:
         state_event: 'Действие'
         title: 'Название'

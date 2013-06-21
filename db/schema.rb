@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130417203506) do
+ActiveRecord::Schema.define(:version => 20130621081628) do
 
   create_table "call_measurers", :force => true do |t|
     t.string   "full_name"
@@ -81,8 +81,8 @@ ActiveRecord::Schema.define(:version => 20130417203506) do
 
   create_table "product_profiles", :force => true do |t|
     t.string   "title"
-    t.integer  "brick_house_cost"
-    t.integer  "panel_house_cost"
+    t.string   "brick_house_cost"
+    t.string   "panel_house_cost"
     t.integer  "product_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(:version => 20130417203506) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.boolean  "show_banner"
+    t.text     "banner_link"
   end
 
   create_table "users", :force => true do |t|

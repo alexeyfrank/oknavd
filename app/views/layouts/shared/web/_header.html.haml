@@ -11,7 +11,8 @@
 
     .span4.logo-box
       - if settings :show_banner
-        %img.banner-btn(src="#{settings(:banner_url)}")
+        %a{ href: settings(:banner_link) }
+          %img.banner-btn(src="#{settings(:banner_url)}")
 
     .span2.right
       .right-text
