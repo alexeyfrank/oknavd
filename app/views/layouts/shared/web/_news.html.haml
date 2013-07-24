@@ -2,7 +2,7 @@
 .content
   - news_items.each do |n|
     .news-block
-      = image_tag n.preview_image.url
+      = image_tag n.preview_image_url
       = link_to n.title, news_path(n)
 
     -#
