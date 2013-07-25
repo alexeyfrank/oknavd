@@ -2,5 +2,5 @@
 .content
   - news_items.each do |n|
     .news-block
-      %img{ src: n.preview_image_url }
+      -# %img{ src: n.preview_image_url }
       = link_to n.title, news_path(n)
